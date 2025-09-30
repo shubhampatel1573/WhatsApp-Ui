@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_app/Screens/Profile/profilescreen.dart';
 import 'package:whatsapp_app/Widgets/uihelper.dart';
 
 class Otpscreen extends StatelessWidget {
-  final phonenumber;
+  final String phonenumber;
   Otpscreen({super.key, required this.phonenumber});
+
   TextEditingController otp1Controller = TextEditingController();
+
   TextEditingController otp2Controller = TextEditingController();
+
   TextEditingController otp3Controller = TextEditingController();
+
   TextEditingController otp4Controller = TextEditingController();
+
   TextEditingController otp5Controller = TextEditingController();
+
   TextEditingController otp6Controller = TextEditingController();
 
   @override
@@ -76,7 +83,12 @@ class Otpscreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: UiHelper.customButton(
-        callback: () {},
+        callback: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ProfileScreen()),
+          );
+        },
         buttonname: "Next",
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

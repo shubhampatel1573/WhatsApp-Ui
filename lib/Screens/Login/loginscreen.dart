@@ -3,6 +3,8 @@ import 'package:whatsapp_app/Screens/OTP/otpscreen.dart';
 import 'package:whatsapp_app/Widgets/uihelper.dart';
 
 class Loginscreen extends StatefulWidget {
+  const Loginscreen({super.key});
+
   @override
   State<Loginscreen> createState() => _LoginscreenState();
 }
@@ -110,6 +112,7 @@ class _LoginscreenState extends State<Loginscreen> {
               SizedBox(
                 width: 185,
                 child: TextField(
+                  keyboardType: TextInputType.numberWithOptions(),
                   controller: phoneController,
                   decoration: InputDecoration(
                     enabledBorder: UnderlineInputBorder(
