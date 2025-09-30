@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_app/Screens/Profile/profilescreen.dart';
 import 'package:whatsapp_app/Widgets/uihelper.dart';
 
-class Otpscreen extends StatelessWidget {
+class Otpscreen extends StatefulWidget {
   final String phonenumber;
   Otpscreen({super.key, required this.phonenumber});
 
+  @override
+  State<Otpscreen> createState() => _OtpscreenState();
+}
+
+class _OtpscreenState extends State<Otpscreen> {
   TextEditingController otp1Controller = TextEditingController();
 
   TextEditingController otp2Controller = TextEditingController();
@@ -33,7 +38,7 @@ class Otpscreen extends StatelessWidget {
             ),
             SizedBox(height: 20),
             UiHelper.customText(
-              text: "You've tried to register +91 $phonenumber",
+              text: "You've tried to register +91 ${widget.phonenumber}",
               height: 15,
             ),
             UiHelper.customText(
