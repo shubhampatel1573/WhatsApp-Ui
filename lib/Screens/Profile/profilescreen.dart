@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:whatsapp_app/Screens/Home/homescreen.dart';
 import 'package:whatsapp_app/Widgets/uihelper.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -85,7 +86,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
       floatingActionButton: UiHelper.customButton(
-        callback: () {},
+        callback: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Homescreen()),
+          );
+        },
         buttonname: "Next",
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
